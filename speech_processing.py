@@ -1,7 +1,5 @@
 """
-Created on Thu Jun 25 23:06:24 2020
-
-@author: zhenzi Weng
+@author: Van-Tam
 """
 from __future__ import absolute_import
 from __future__ import division
