@@ -1,6 +1,4 @@
 """
-Created on Tue Jun 23 23:41:39 2020
-
 @author: Van-Tam
 """
 from __future__ import absolute_import
