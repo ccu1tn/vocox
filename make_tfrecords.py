@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Mar 23 14:35:39 2021
-
-@author: Zhenzi Weng
+@author: Van-Tam
 """
 from __future__ import absolute_import
 from __future__ import division
