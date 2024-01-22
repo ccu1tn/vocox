@@ -210,13 +210,7 @@ class Chan_Model(object):
         length_value = 2
         noise_params = self.genetic_generation(population_size=20, generations=10, mutation_rate=0.2, signal_length=length_value)
         noise = generate_noise(noise_params[0], noise_params[1], noise_params[2], length=length_value) + tf.random.normal(shape=tf.shape(x), mean=0.0, stddev=std, dtype=tf.float32)
-        # noise = tf.resize(noise, size=x[:-1])
-        # print('noise', noise)
-        # exit()f
-        #print('noise',noise)
-        # noise1 = generate_noise(*noise_params, length=16) + tf.random.normal(shape=tf.shape(x), mean=0.0, stddev=std, dtype=tf.float32)
-        # print('noise1',noise1)
-        # exit()
+        noise = np.clip(noise, -2**31, 2**31-1) 
         n_real = noise[:, :, :, 0]
         n_imag = noise[:, :, :, 1]
         n_complex = tf.dtypes.complex(real=n_real, imag=n_imag)
